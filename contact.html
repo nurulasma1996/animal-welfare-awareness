@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Contact Us | DVS Malaysia</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="banner">
+
+        <img
+            src="images/animal-banner.png"
+            alt="Animal Welfare Awareness Banner"
+        >
+
+        <div class="banner-text">
+
+            <h1>
+                Animal Welfare<br>
+                Awareness
+            </h1>
+
+            <p>
+                Department of Veterinary Services (DVS) Malaysia
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="aboutus.html">
+            About Us
+        </a>
+
+        <a href="awareness.html">
+            Awareness
+        </a>
+
+        <a href="resources.html">
+            Resources
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+       <a href="aboutme.html">
+            About Me
+        </a>
+
+    </nav>
+
+
+    <main>
+
+
+        <!-- ================= FORM CONTAINER ================= -->
+
+        <section class="contact-form-section">
+
+            <div class="contact-form-grid">
+
+
+                <!-- PET SHOP LICENSING FORM -->
+
+                <div class="contact-form-card">
+
+                    <div class="contact-form-icon">
+                        🐾
+                    </div>
+
+                    <h2>
+                        Pet Shop Licensing Application
+                    </h2>
+
+                    <p class="contact-form-description">
+                        Complete the form below to submit your initial
+                        enquiry regarding a pet shop licence.
+                    </p>
+
+
+                    <form
+                        id="petshop-form"
+                        class="contact-form"
+                        action="https://script.google.com/macros/s/AKfycbwOiQmaRzuX8DFoLPQvXs2bIk2Cx6npEnSY7VwhCeoRMzYx7F6pNPOYiHSn-IoOQxZ15A/exec"
+                        method="post"
+                        target="google-sheet-response"
+                    >
+
+                        <input
+                            type="hidden"
+                            name="form_type"
+                            value="petshop"
+                        >
+
+
+                        <div class="form-group">
+
+                            <label for="applicant-name">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="applicant-name"
+                                name="applicant_name"
+                                placeholder="Enter your full name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="phone-number">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone-number"
+                                name="phone_number"
+                                placeholder="Example: 012-3456789"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="applicant-email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="applicant-email"
+                                name="applicant_email"
+                                placeholder="Example: name@email.com"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="business-address">
+                                Pet Shop or Business Address
+                            </label>
+
+                            <textarea
+                                id="business-address"
+                                name="business_address"
+                                rows="5"
+                                placeholder="Enter the complete business address"
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <button
+                            class="contact-submit-button"
+                            type="submit"
+                        >
+                            Submit Application
+                        </button>
+
+
+                        <p
+                            id="petshop-status"
+                            class="form-status"
+                            aria-live="polite">
+                        </p>
+
+                    </form>
+
+                </div>
+
+
+                <!-- WEBSITE FEEDBACK FORM -->
+
+                <div class="contact-form-card">
+
+                    <div class="contact-form-icon">
+                        💬
+                    </div>
+
+                    <h2>
+                        Website Improvement Feedback
+                    </h2>
+
+                    <p class="contact-form-description">
+                        Share your comments and suggestions to help us
+                        improve the information and user experience
+                        provided by this website.
+                    </p>
+
+
+                    <form
+                        id="feedback-form"
+                        class="contact-form"
+                        action="https://script.google.com/macros/s/AKfycbwOiQmaRzuX8DFoLPQvXs2bIk2Cx6npEnSY7VwhCeoRMzYx7F6pNPOYiHSn-IoOQxZ15A/exec"
+                        method="post"
+                        target="google-sheet-response"
+                    >
+
+                        <input
+                            type="hidden"
+                            name="form_type"
+                            value="feedback"
+                        >
+
+
+                        <div class="form-group">
+
+                            <label for="feedback-name">
+                                Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="feedback-name"
+                                name="feedback_name"
+                                placeholder="Enter your name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="feedback-email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="feedback-email"
+                                name="feedback_email"
+                                placeholder="Example: name@email.com"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="feedback-category">
+                                Feedback Category
+                            </label>
+
+                            <select
+                                id="feedback-category"
+                                name="feedback_category"
+                                required
+                            >
+
+                                <option value="">
+                                    Select a category
+                                </option>
+
+                                <option value="Website Design">
+                                    Website Design
+                                </option>
+
+                                <option value="Website Content">
+                                    Website Content
+                                </option>
+
+                                <option value="Navigation">
+                                    Website Navigation
+                                </option>
+
+                                <option value="Technical Issue">
+                                    Technical Issue
+                                </option>
+
+                                <option value="General Suggestion">
+                                    General Suggestion
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="feedback-message">
+                                Feedback or Suggestion
+                            </label>
+
+                            <textarea
+                                id="feedback-message"
+                                name="feedback_message"
+                                rows="5"
+                                placeholder="Tell us how we can improve this website"
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <button
+                            class="contact-submit-button"
+                            type="submit"
+                        >
+                            Submit Feedback
+                        </button>
+
+
+                        <p
+                            id="feedback-status"
+                            class="form-status"
+                            aria-live="polite">
+                        </p>
+
+                    </form>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT INFORMATION ================= -->
+
+        <section class="official-contact-section">
+
+            <div class="official-contact-header">
+
+                <div class="official-contact-icon">
+                    ☎
+                </div>
+
+                <div>
+
+                    <h2>
+                        Official Contact Information
+                    </h2>
+
+                    <p>
+                        Contact the Animal Welfare Section for enquiries
+                        regarding animal welfare and licensing matters.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="official-contact-grid">
+
+
+                <!-- OFFICE -->
+
+                <div class="contact-information-card">
+
+                    <h3>
+                        Office
+                    </h3>
+
+                    <p>
+                        <strong>Animal Welfare Section</strong><br>
+                        Veterinary Regulatory Division<br>
+                        Department of Veterinary Services
+                    </p>
+
+                </div>
+
+
+                <!-- ADDRESS -->
+
+                <div class="contact-information-card">
+
+                    <h3>
+                        Address
+                    </h3>
+
+                    <address>
+                        Level 1, Podium Block 1B, Lot 4G1,<br>
+                        Wisma Tani, Precinct 4,<br>
+                        Federal Government Administrative Centre,<br>
+                        62624 Putrajaya, Malaysia.
+                    </address>
+
+                </div>
+
+
+                <!-- PHONE AND EMAIL -->
+
+                <div class="contact-information-card">
+
+                    <h3>
+                        Hotline and Email
+                    </h3>
+
+                    <p>
+                        <strong>Telephone:</strong><br>
+
+                        <a href="tel:+60388702349">
+                            03-8870 2349
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>Fax:</strong><br>
+                        03-8888 6949
+                    </p>
+
+                    <p>
+                        <strong>Email:</strong><br>
+
+                        <a href="mailto:admin_akh@dvs.gov.my">
+                            admin_akh@dvs.gov.my
+                        </a>
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © Nurul Asma Binti Ahmad 2025763353 |
+            Fakulti Sains Komputer dan Matematik (FSKM)
+            Universiti Teknologi Mara UITM Shah Alam
+        </p>
+
+        <p>
+            Disclaimer: This website is developed for educational
+            purposes as part of the IMS458 Web Design &amp;
+            Development assignment.
+        </p>
+
+    </footer>
+
+
+    <!-- Hidden Google Sheet response -->
+
+    <iframe
+        id="google-sheet-response"
+        class="google-sheet-response"
+        name="google-sheet-response"
+        title="Form submission response">
+    </iframe>
+
+
+    <!-- External JavaScript -->
+
+    <script src="js/contact.js"></script>
+
+<!-- ================= SHARE BUTTON ================= -->
+
+<div class="share-widget">
+
+    <div
+        id="share-menu"
+        class="share-menu"
+        aria-hidden="true"
+    >
+
+        <button
+            id="share-whatsapp"
+            class="share-option"
+            type="button"
+        >
+            WhatsApp
+        </button>
+
+        <button
+            id="share-facebook"
+            class="share-option"
+            type="button"
+        >
+            Facebook
+        </button>
+
+        <button
+            id="share-email"
+            class="share-option"
+            type="button"
+        >
+            Email
+        </button>
+
+        <button
+            id="copy-page-link"
+            class="share-option"
+            type="button"
+        >
+            Copy Link
+        </button>
+
+    </div>
+
+
+    <p
+        id="share-status"
+        class="share-status"
+        aria-live="polite">
+    </p>
+
+
+    <button
+        id="share-page-button"
+        class="share-page-button"
+        type="button"
+        aria-expanded="false"
+        aria-controls="share-menu"
+    >
+        <span class="share-button-icon">
+            🔗
+        </span>
+
+        Share This Page
+    </button>
+
+</div>
+
+
+<script src="js/share.js"></script>
