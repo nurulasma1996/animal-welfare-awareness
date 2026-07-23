@@ -2114,3 +2114,152 @@ nav a.active {
     }
 
 }
+
+/* =====================================
+   RESPONSIVE HEADER AND NAVIGATION
+===================================== */
+
+/* Desktop navigation improvement */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 45px;
+}
+
+nav a {
+    margin: 0;
+}
+
+
+/* =====================================
+   TABLET AND MOBILE HEADER
+===================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* Banner */
+
+    .banner {
+        position: relative;
+        width: 100%;
+        height: 260px;
+        overflow: hidden;
+    }
+
+    .banner img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .banner-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 92%;
+        padding: 0 10px;
+
+        transform: translate(-50%, -50%);
+
+        text-align: center;
+        color: white;
+    }
+
+    .banner-text h1 {
+        margin: 0 0 12px;
+
+        font-size: 48px;
+        line-height: 0.9;
+        letter-spacing: 1px;
+
+        word-break: normal;
+    }
+
+    .banner-text p {
+        max-width: 330px;
+        margin: 0 auto;
+
+        font-size: 13px;
+        line-height: 1.4;
+        letter-spacing: 1px;
+    }
+
+
+    /* Navigation becomes two columns */
+
+    nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+
+        width: 100%;
+        padding: 0;
+
+        background: #2e0d38;
+    }
+
+    nav a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        min-height: 48px;
+        margin: 0;
+        padding: 10px 5px;
+
+        color: white;
+
+        font-size: 15px;
+        line-height: 1.2;
+        text-align: center;
+
+        border-right: 1px solid rgba(255, 255, 255, 0.15);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    nav a:nth-child(even) {
+        border-right: none;
+    }
+
+    nav a:hover,
+    nav a.active {
+        background: #40124d;
+        color: #d4af37;
+    }
+
+}
+
+
+/* =====================================
+   SMALL MOBILE DEVICES
+===================================== */
+
+@media screen and (max-width: 480px) {
+
+    .banner {
+        height: 230px;
+    }
+
+    .banner-text h1 {
+        font-size: 40px;
+        line-height: 0.92;
+    }
+
+    .banner-text p {
+        max-width: 290px;
+        font-size: 12px;
+        letter-spacing: 0.7px;
+    }
+
+    nav a {
+        min-height: 46px;
+        padding: 9px 4px;
+        font-size: 14px;
+    }
+
+}
